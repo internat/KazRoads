@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Техподдержка | KazRoads</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nuris_ai.css">
+</head>
+<body>
+    <div class="ai-header">
+        <h1><i class="fas fa-robot"></i> AI Техподдержка KazRoads</h1>
+        <p>Задайте вопрос нашему ИИ-ассистенту или получите консультацию по асфальтированию, ремонту дорог и благоустройству территорий.</p>
+    </div>
+    <div class="ai-chat-container">
+        <div class="ai-messages" id="ai-messages">
+            <div class="ai-message bot">
+                <div class="bubble">
+                    Здравствуйте! Я — виртуальный помощник KazRoads. Чем могу помочь? Опишите вашу задачу или интересующий вопрос по асфальтированию, ремонту дорог, парковок или дворов.
+                </div>
+            </div>
+        </div>
+        <form class="ai-input-row" id="ai-form">
+            <input type="text" id="ai-input" placeholder="Введите ваш вопрос..." autocomplete="off" required />
+            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+    <div class="ai-home-btn-wrapper">
+        <a href="nuris.html" class="main-btn-home"><i class="fas fa-home"></i> <span>На главную</span></a>
+    </div>
+    <div class="ai-footer">
+        &copy; 2025 KazRoads. Все права защищены.
+    </div>
+    <script src="nuris_ai.js"></script>
+</body>
+</html> 

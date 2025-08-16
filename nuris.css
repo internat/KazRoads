@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  padding: 20px;
+}
+.logo span {
+  color: orange;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+#hero {
+  background: url('asphalt-bg.jpg') center/cover no-repeat;
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+.btn {
+  background: orange;
+  color: #fff;
+  padding: 12px 24px;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+}
+.service-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+footer {
+  background: #222;
+  color: white;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, rgba(255,165,0,0.9) 0%, rgba(255,140,0,0.9) 100%);
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.pulse-animation {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.review-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.review-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+.review-avatar {
+    border: 4px solid #fd7e14;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.review-stars i {
+    margin-right: 2px;
+    font-size: 1.2rem;
+}
+.review-stars i.far {
+    color: #e5e7eb;
+}
+/* Анимации */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes popIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  80% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+header {
+  animation: fadeInUp 0.8s cubic-bezier(.23,1.01,.32,1) 0.1s both;
+}
+.hero-gradient {
+  animation: fadeInUp 0.9s cubic-bezier(.23,1.01,.32,1) 0.2s both;
+}
+.service-list, .gallery, form {
+  animation: fadeInUp 1s cubic-bezier(.23,1.01,.32,1) 0.3s both;
+}
+footer {
+  animation: fadeIn 1.2s cubic-bezier(.23,1.01,.32,1) 0.5s both;
+}
+.service-card, .review-card {
+  animation: popIn 0.5s cubic-bezier(.23,1.01,.32,1);
+}
+.btn {
+  animation: popIn 0.5s cubic-bezier(.23,1.01,.32,1);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 2px 8px rgba(255, 152, 0, 0.18);
+}
+/* Reveal анимация для секций */
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.1s cubic-bezier(.23,1.01,.32,1), transform 1.1s cubic-bezier(.23,1.01,.32,1);
+  will-change: opacity, transform;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

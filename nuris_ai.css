@@ -1,0 +1,177 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fffbe6;
+    color: #333;
+    margin: 0;
+    min-height: 100vh;
+}
+.ai-header {
+    background: linear-gradient(90deg, #ffe066 0%, #fffbe6 100%);
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+}
+.ai-header h1 {
+    color: #ffb300;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+.ai-header p {
+    color: #7c6f00;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+.ai-chat-container {
+    max-width: 480px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(255, 224, 102, 0.2);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+}
+.ai-messages {
+    min-height: 200px;
+    max-height: 320px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+}
+.ai-message {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+.ai-message.user .bubble {
+    background: #ffe066;
+    color: #7c6f00;
+    align-self: flex-end;
+    margin-left: auto;
+}
+.ai-message.bot .bubble {
+    background: #fffbe6;
+    color: #333;
+    align-self: flex-start;
+    margin-right: auto;
+}
+.bubble {
+    padding: 0.75rem 1.2rem;
+    border-radius: 1.2rem;
+    max-width: 80%;
+    box-shadow: 0 2px 8px rgba(255, 224, 102, 0.08);
+}
+.ai-input-row {
+    display: flex;
+    gap: 0.5rem;
+}
+.ai-input-row input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid #ffe066;
+    font-size: 1rem;
+    outline: none;
+}
+.ai-input-row button {
+    background: #ffe066;
+    color: #7c6f00;
+    border: none;
+    border-radius: 1rem;
+    padding: 0 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.ai-input-row button:hover {
+    background: #ffb300;
+    color: #fff;
+}
+.ai-footer {
+    text-align: center;
+    color: #bfa900;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+}
+
+/* Кнопка "На главную" — ярко-оранжевая, обычная кнопка, с отступом от чата */
+.main-btn-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, #ff9800 0%, #ffb300 100%);
+    color: #fff;
+    padding: 1em 2.2em;
+    border-radius: 2em;
+    font-size: 1.15em;
+    font-weight: 700;
+    box-shadow: 0 4px 18px rgba(255, 152, 0, 0.18);
+    border: none;
+    outline: none;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    letter-spacing: 0.03em;
+    margin-top: 3.5rem;
+    margin-bottom: 2.5rem;
+    cursor: pointer;
+}
+.main-btn-home:hover, .main-btn-home:focus {
+    background: linear-gradient(90deg, #ffa726 0%, #ff9800 100%);
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+    box-shadow: 0 8px 24px rgba(255, 152, 0, 0.28);
+    text-decoration: none;
+}
+.main-btn-home i {
+    font-size: 1.3em;
+    margin-right: 0.5em;
+}
+
+/* Центрируем кнопку под чатом */
+.ai-home-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+} 
+
+/* Анимации */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    80% { opacity: 1; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.ai-header {
+    animation: fadeInUp 0.8s cubic-bezier(.23,1.01,.32,1) 0.1s both;
+}
+.ai-chat-container {
+    animation: fadeInUp 0.9s cubic-bezier(.23,1.01,.32,1) 0.3s both;
+}
+.ai-home-btn-wrapper {
+    animation: fadeInUp 1s cubic-bezier(.23,1.01,.32,1) 0.5s both;
+}
+.ai-footer {
+    animation: fadeIn 1.2s cubic-bezier(.23,1.01,.32,1) 0.7s both;
+}
+
+/* Анимация для пузырей сообщений */
+.bubble {
+    animation: popIn 0.45s cubic-bezier(.23,1.01,.32,1);
+}
+
+/* Анимация нажатия для кнопки */
+.main-btn-home:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 8px rgba(255, 152, 0, 0.18);
+}
+
+/* Плавное появление новых сообщений */
+.ai-message {
+    transition: opacity 0.3s, transform 0.3s;
+} 

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Галерея работ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nuris12.css">
+</head>
+<body>
+  <nav class="gallery-nav">
+    <div class="burger" id="burgerBtn">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect y="6" width="32" height="4" rx="2" fill="#fff"/>
+        <rect y="14" width="32" height="4" rx="2" fill="#fff"/>
+        <rect y="22" width="32" height="4" rx="2" fill="#fff"/>
+      </svg>
+    </div>
+    <ul id="galleryMenu">
+      <li><a href="nuris.html#services">Услуги</a></li>
+      <li><a href="nuris.html#advantages">Преимущества</a></li>
+      <li><a href="nuris.html#about">О нас</a></li>
+      <li><a href="nuris.html#contact">Контакты</a></li>
+      <li><a href="nuris12.html" class="active">Галерея</a></li>
+    </ul>
+  </nav>
+  <h1>Галерея работ</h1>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="proces.jpg" alt="Работа 1">
+      <div class="caption">Процесс работы</div>
+    </div>
+    <div class="gallery-item">
+      <img src="nuris.jpg" alt="Работа 2">
+      <div class="caption">Асфальтирование дворов</div>
+    </div>
+    <div class="gallery-item">
+      <img src="nur1.jpg" alt="Работа 3">
+      <div class="caption">Асфальтирование улицы</div>
+    </div>
+    <div class="gallery-item">
+      <img src="nurik.jpg" alt="Работа 4">
+      <div class="caption">Укладка парковок</div>
+    </div>
+    <div class="gallery-item">
+      <img src="nurqais.jpg" alt="Работа 5">
+      <div class="caption">Подготовка основания</div>
+    </div>
+    <div class="gallery-item">
+      <img src="rem.jpeg" alt="Работа 6">
+      <div class="caption">Ремонт покрытий</div>
+    </div>
+    <div class="gallery-item">
+      <img src="qz.jpg" alt="Работа 7">
+      <div class="caption">Асфальтирование перед зданиями</div>
+    </div>
+    <div class="gallery-item">
+      <img src="dorogi.jpg" alt="Работа 8">
+      <div class="caption">Асфальтирование дорог</div>
+    </div>
+    <div class="gallery-item">
+      <img src="двор.jpeg" alt="Работа 9">
+      <div class="caption">Дворовые покрытия</div>
+    </div>
+    <div class="gallery-item">
+      <img src="yama.jpeg" alt="Работа 10">
+      <div class="caption">Ямочный Ремонт</div>
+    </div>
+    <div class="gallery-item">
+      <img src="бардюр.jpg" alt="Работа 11">
+      <div class="caption">Бордюр</div>
+    </div>
+    <div class="gallery-item">
+      <img src="nuris.webp" alt="Работа 12">
+      <div class="caption">устоновка лотков</div>
+    </div>
+  </div>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox-modal" style="display:none;">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" src="" alt="Фото работы">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+
+  <script src="nuris12.js"></script>
+</body>
+</html> 
